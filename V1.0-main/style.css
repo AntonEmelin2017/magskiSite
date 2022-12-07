@@ -1,0 +1,247 @@
+/*для отступов в html нажимай не пробел, а     tab*/
+/* из-за того, что ты сделал контейнер только для хедера всё остальное летит в пизду при изменении ширины экрана*/
+
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    width: 100%;
+    height: 5000px;
+}
+
+.header {
+    height: 80px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+@font-face {
+    font-family: 'Intro';
+    src: local('fonts'), url('intro.woff2') format('woff2'), url('intro.woff') format('woff'), url('intro.ttf') format('truetype');
+    font-style: normal;
+}
+
+body {
+    margin: auto;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    /*зачем марджин и паддинг для боди? цвет лучше задавать не боди а оболочке, которая полносью повторяет боди*/
+}
+
+.footer {
+    height: 800px;
+    background-color: #ffffff;
+    color: rgb(255, 255, 255);
+}
+
+.name {
+    color: #000000;
+    -webkit-text-stroke: 1px #ffffff;
+    /*-webkit это префикс, погугли*/
+    font-size: 24px;
+    display: inline;
+    font-family: intro;
+    margin-left: 4px;
+}
+
+.sakura {
+    margin-left: 10px;
+    width: 6%;
+    margin-bottom: 10px;
+}
+
+.auth {
+    background-color: #ffffff;
+    border-radius: 30px;
+    border: 10px solid #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.reg {
+    margin-left: 20px;
+    background-color: #00e608;
+    border-radius: 30px;
+    border: 10px solid #00e608;
+    font-size: 20px;
+    color: white;
+}
+
+.nav {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.container {
+    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /*теперь разлетаются на разные концы container-inner и nav*/
+    justify-content: space-between;
+    /*паддинги чтобы при сжатии контент не прилипал к границам*/
+    padding: 0 50px;
+}
+
+
+
+/*добавил новый див, внутри него лого и иконку выровнил по горизонтали*/
+.container-inner {
+    display: flex;
+    align-items: center;
+    
+}
+
+.robo {
+    width: 100%;
+}
+
+p {
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    font-family: intro;
+    -webkit-text-stroke: 3px #ffffff;
+    text-decoration: overline 2px #00e608;
+    text-align: center;
+    margin-top: -1px;
+    margin-bottom: 100px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    
+    background-color: black;
+    border: 1px solid red;
+    padding: 0 50px;
+
+}
+
+.box-text {
+    border: 1px solid red;
+    padding: 40px 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.box-left {
+    border: 1px solid red;
+}
+.box-right {
+    border: 1px solid red;
+}
+
+.boxer {
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.girl {
+    max-width: 600px;
+    border-radius: 100px;
+    /*margin-left: 30px;
+    margin-top: 30px;*/
+    border: 1px solid red;
+}
+
+.hello {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-family: intro;
+    -webkit-text-stroke: 2px #000000;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    color: rgb(51, 255, 0);
+    font-family: intro;
+    /*margin: 150px 0px 150px 220px;*/
+    font-weight: lighter;
+}
+
+.description {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-family: intro;
+    -webkit-text-stroke: 2px #000000;
+    text-align: center;
+}
+
+.cash {
+    color: #00e608;
+}
+
+.popular {
+    background: linear-gradient(330deg, #e05252 0%, #00e608 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+    /*топчик*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0px #000000;
+}
+
+.fitness {
+    width: 800px;
+    border-radius: 100px;
+    
+    margin-top: 30px;
+}
+
+.wow {
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    font-family: intro;
+    -webkit-text-stroke: 2px #ffffff;
+    text-align: center;
+}
+
+.bigger {
+    font-size: 50px;
+}
+
+.hueta {
+    max-width: 750px;
+}
+
+.maga {
+    border-radius: 100px;
+    max-width: 800px;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 1205px) {
+    .box {
+        flex-wrap: wrap;
+    }
+    .description {
+        padding: 30px 0;
+    }
+    .box-right {
+        padding: 30px 0;
+    }
+    .box {
+        align-items: center;
+    }
+    .wow {
+        display: none;
+    }
+    .maga {
+        max-width: 500px;
+        object-fit:fill;
+    }
+   
+}
